@@ -1,0 +1,55 @@
+// Paste into https://dbdiagram.io to render the ER diagram, then export as PNG.
+Table customers {
+  customer_id int [pk, increment]
+  first_name varchar
+  last_name varchar
+  email varchar [unique]
+  phone varchar [unique]
+  date_of_birth date
+  kyc_status varchar
+  created_at timestamp
+}
+Table branches {
+  branch_id int [pk, increment]
+  branch_name varchar [unique]
+  city varchar
+  state varchar
+}
+Table account_types {
+  account_type_id int [pk, increment]
+  type_name varchar [unique]
+  min_balance numeric
+  interest_rate numeric
+}
+Table accounts {
+  account_id int [pk, increment]
+  account_number char(10) [unique]
+  customer_id int [ref: > customers.customer_id]
+  branch_id int [ref: > branches.branch_id]
+  account_type_id int [ref: > account_types.account_type_id]
+  balance numeric
+  status varchar
+  opened_at timestamp
+}
+Table transactions {
+  transaction_id bigint [pk, increment]
+  account_id int [ref: > accounts.account_id]
+  txn_type varchar
+  amount numeric
+  balance_after numeric
+  status varchar
+  reference varchar [unique]
+  reverses_txn_id bigint [ref: > transactions.transaction_id]
+  description varchar
+  created_at timestamp
+}
+Table transfers {
+  transfer_id bigint [pk, increment]
+  from_account_id int [ref: > accounts.account_id]
+  to_account_id int [ref: > accounts.account_id]
+  amount numeric
+  status varchar
+  debit_txn_id bigint [ref: > transactions.transaction_id]
+  credit_txn_id bigint [ref: > transactions.transaction_id]
+  initiated_at timestamp
+}
