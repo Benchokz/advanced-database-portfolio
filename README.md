@@ -29,7 +29,13 @@ accounts, reverse a failed transaction, audit account balances, retrieve stateme
 - `portfolio-5-distributed-cloud/` - replication, sharding, availability
 
 ## Tools
-PostgreSQL (Docker), MongoDB (Docker), Docker Compose, DBeaver, dbdiagram.io, Git.
+  PostgreSQL 18, pgAdmin 4, dbdiagram.io, Git/GitHub, VS Code. (MongoDB and replication tooling will be added in Portfolios 4 and 5.)
 
 ## AI Use Declaration
-<Complete at the end: tool used, what it was used for, how you reviewed and tested the output.>
+  - Tool used: Claude (Anthropic)
+  - Used for: drafting the case study statement, database schema, ER diagram
+    source, README documentation, and explaining concepts and setup steps.
+  - How I verified it: I ran the schema in PostgreSQL 18 via pgAdmin, tested
+    constraints with deliberate valid and invalid inserts, reviewed the
+    normalisation explanation to make sure I could explain it, and corrected
+    mistakes where the output didn't match my results.
