@@ -101,3 +101,5 @@ My data is random and evenly spread. Real bank data is not, so real results coul
 
 ## Reflection
 My first runs of some tests included disk reads, which made them look slower than they really were. I ran each test again until the data was in memory, so that the "before" and "after" results could be compared fairly. I also learned that an index does not fix every query, as the Q2 result showed.
+
+AI use: Claude (an AI assistant by Anthropic) helped me generate the script that creates the fake data, the five queries, the EXPLAIN and index scripts, and a draft of this README, and it helped me understand how to read the execution plans. I ran every script myself in PostgreSQL and pgAdmin, took all the screenshots and recorded the timings from my own runs, and checked that the explanations match what my plans show.
