@@ -128,6 +128,9 @@ After the reversal, the balances are back to 100,000 and 50,000.
 ![Balances after reversal](screenshots/07_reverse_balances.png)
 ![Transaction records after reversal](screenshots/07_reverse_transactions.png)
 
+## Limitations of this exercise
+The concurrency demos use two query tabs that I ran by hand, step by step, on two tiny demo accounts. This shows how each problem and fix works, but it is not a real load test with many users at once.
+
 ## What I learned
 - A transaction is **all or nothing**, which keeps a bank's money consistent.
 - Reading a value and then writing back a result you calculated yourself is dangerous when other people can change the data in between.

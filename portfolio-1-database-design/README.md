@@ -1,8 +1,17 @@
 # Portfolio 1: Database Design and Modelling
 
-**Case study:** Benchokz Bank Limited (simulated retail bank). See the root README for the full case study statement.
+**Evidence provided:** Chosen case study description, ER diagram, relational schema, keys, constraints, and normalisation explanation.
 
-## Files
+**Case study:** Benchokz Bank Limited (a simulated retail bank). See the root README for the full case study statement.
+
+## In one minute
+- A **relational database** stores data in tables that are linked to each other by keys.
+- I designed **6 tables** for the bank: `customers`, `branches`, `account_types`, `accounts`, `transactions` and `transfers`, and drew them as an ER diagram.
+- I wrote the schema in PostgreSQL with **primary keys, foreign keys, UNIQUE and CHECK rules**, so the database itself refuses bad data.
+- I explained how the design reaches **third normal form (3NF)**, and which values I kept on purpose even though they could be calculated.
+- I tested it: a valid record is accepted, and records that break a rule are rejected.
+
+## Files in this folder
 - `er_diagram.dbml` - source code of the ER diagram (rendered on dbdiagram.io)
 - `er_diagram.png` - the rendered ER diagram
 - `schema.sql` - PostgreSQL table definitions with keys and constraints
@@ -61,5 +70,12 @@ The risk with duplicated values is that they can disagree. I will handle this in
 ![CHECK constraint error](screenshots/04_check_constraint_error.png)
 ![Foreign key error](screenshots/05_foreign_key_error.png)
 
+## What I learned
+- Splitting data into separate tables means each fact is stored once, so it cannot disagree with itself.
+- Keys and constraints let the database protect the data, instead of trusting every application to behave.
+- Normalisation is a guide, not a law: I kept a few calculated values on purpose for speed, and I know the risk that comes with that.
+
 ## Reflection
-I gained this understanding through the MIT 8103 course material and by building the Benchokz Bank database myself in PostgreSQL and pgAdmin, where running the schema and deliberately triggering the CHECK and foreign key errors showed me in practice how keys, constraints and normalisation protect data, with Claude (an AI assistant by Anthropic) as a learning aid that helped draft the schema and documentation, whose output I tested and verified against my own results.
+I gained this understanding through the MIT 8103 course material and by building the Benchokz Bank database myself in PostgreSQL and pgAdmin. Running the schema and deliberately triggering the CHECK and foreign key errors showed me in practice how keys, constraints and normalisation protect data.
+
+**AI use:** Claude (an AI assistant by Anthropic) helped me draft the schema, the ER diagram source, the normalisation write-up and this README, and helped me understand keys, constraints and normalisation. I ran the schema myself in PostgreSQL and pgAdmin, triggered the errors, took the screenshots, and checked that the results match what I describe.
