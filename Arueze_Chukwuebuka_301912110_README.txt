@@ -101,6 +101,7 @@ Used for:
     scripts, and drafting the explanations of replication, consistency, sharding and
     cloud deployment.
   - Explaining concepts and giving git/VS Code commands.
+  - Drafting the 2-3 page technical documentation and this README.
 
 How verified: I ran every script myself (pgAdmin for PostgreSQL, MongoDB Compass and
 PowerShell for MongoDB), took the screenshots myself, and checked that the results
