@@ -153,7 +153,7 @@ Without an index, MongoDB read all 50,000 documents for both queries. After the 
 ## Screenshots
 All screenshots are in `screenshots/`:
 
-- `01_load_output.png`, `01_load_output_b.png`: data loaded (counts and sample documents)
+- `01_load_output.png`: data loaded (counts and sample documents)
 - `01_customers_document.png`, `01_transactions_document.png`: documents in Compass
 - `02_q1` to `02_q7`: query results
 - `03_a1` to `03_a5`: aggregation results
