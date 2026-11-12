@@ -71,7 +71,7 @@ The zipped folder contains the whole repository:
   portfolio-4-nosql/
   portfolio-5-distributed-cloud/
   README.md
-plus the 2-3 page documentation (Arueze_Chukwuebuka_Documentation.pdf).
+plus the 2-3 page documentation (Arueze_Chukwuebuka_301912110_Technical_Documentation.pdf).
 
 Start with README.md, then open each portfolio folder and read its README.md.
 Screenshots are in each folder's "screenshots" subfolder. Scripts are numbered in the

@@ -41,8 +41,8 @@ Each portfolio folder has its own README with the steps, screenshots and a short
 - `portfolio-3-transactions-concurrency/` - commit, rollback, isolation, locking
 - `portfolio-4-nosql/` - MongoDB document model, queries, aggregations, indexes
 - `portfolio-5-distributed-cloud/` - replica set, failover, consistency, sharding and cloud discussion
-- `Arueze_Chukwuebuka_Documentation.pdf` - the 2-3 page documentation
-- `Arueze_Chukwuebuka_README.txt` - plain-text README submitted with the work
+- `Arueze_Chukwuebuka_301912110_Technical_Documentation.pdf` - the 2-3 page documentation
+- `Arueze_Chukwuebuka_301912110_README.txt` - plain-text README submitted with the work
 
 ## How to read this repository
 Start with this file, then open each `portfolio-N-...` folder and read its `README.md`. Screenshots are in each folder's `screenshots/` subfolder, and the scripts are numbered in the order they were run.
